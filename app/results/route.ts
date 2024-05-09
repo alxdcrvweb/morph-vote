@@ -3,8 +3,6 @@ import { NextRequest } from "next/server";
 import { getResults } from "../lib/db";
 
 export async function POST(request: NextRequest) {
-  //приходит чет типа {0:14, 1:88, 2:228}, где 0...2 -- за шо голосовали и 14...228 -- сколько проголосовали
-  //сам распихивай и парсь как надо
   let results = await getResults();
   let total = results[1] + results[2];
   let res1 = (total / results[1]).toFixed(0);
