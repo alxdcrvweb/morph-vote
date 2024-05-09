@@ -2,7 +2,7 @@ import { Frame, getFrameFlattened } from "frames.js";
 import type { Metadata } from "next";
 
 // Declare the frame
-const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/help.jpg`;
+const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/first.png`;
 const initialFrame: Frame = {
   image: imageUrl,
   version: "vNext",
@@ -17,8 +17,8 @@ const initialFrame: Frame = {
 
 
 export const metadata: Metadata = {
-  title: "Test Name",
-  description: "Check",
+  title: "Morph voting",
+  description: "Morph voting",
   openGraph: {
     images: [
       {

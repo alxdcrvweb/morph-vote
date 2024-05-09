@@ -8,14 +8,14 @@ export async function POST(request: NextRequest) {
   let message = await getFrameMessage(body);
   let button = message?.buttonIndex || body.untrustedData.buttonIndex;
   let success = await vote(message.requesterFid, button);
-  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/aaa.jpg`
+  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/thanks.png`
     const frame: Frame = {
       image: imageUrl,
       version: "vNext",
       buttons: [
         {
           action: "post",
-          label: "SEE RESULTS",
+          label: "See results",
         }
       ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/results`,

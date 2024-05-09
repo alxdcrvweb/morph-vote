@@ -13,18 +13,18 @@ export async function POST(request: NextRequest) {
 
   let num = await getAvailableVotes(message.requesterFid);
   if (num > 0) {
-    const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/123.jpg`;
+    const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/first.png`;
     const frame: Frame = {
       image: imageUrl,
       version: "vNext",
       buttons: [
         {
           action: "post",
-          label: "VOTE 1",
+          label: "Yes",
         },
         {
           action: "post",
-          label: "VOTE 2",
+          label: "No",
         },
       ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/ready`,
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
       status: 200,
     });
   } else if(num == 0) {
-    const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/123.jpg`;
+    const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/sorry.png`;
     const frame: Frame = {
       image: imageUrl,
       version: "vNext",

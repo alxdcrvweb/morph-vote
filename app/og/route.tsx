@@ -2,16 +2,6 @@ import { ImageResponse } from "next/og";
 import "../globals.scss";
 export const runtime = "experimental-edge";
 
-const getNostra = async () => {
-  const response = await fetch(
-    new URL(
-      "../../public/fonts/Nostra/Nostrav1.0-StreamTrial.otf",
-      import.meta.url
-    )
-  );
-  const interSemiBold = await response.arrayBuffer();
-  return interSemiBold;
-};
 const getApocLC = async () => {
   const response = await fetch(
     new URL(
@@ -28,14 +18,15 @@ const getApocLC = async () => {
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
 
-  const time = searchParams.get("time");
+  const precent = searchParams.get("precent1");
+  const precent2 = searchParams.get("precent2");
   const frame = {
     display: "flex",
     // justifyContent: "center",
     flexDirection: "column",
     alignItems: "center",
     backgroundSize: "contain",
-    backgroundImage: `url(${process.env.NEXT_PUBLIC_HOST}/timeMorph.jpg)`,
+    backgroundImage: `url(${process.env.NEXT_PUBLIC_HOST}/result.png)`,
     width: "100%",
     height: "100%",
     paddingTop: "150px",
@@ -45,21 +36,34 @@ export async function GET(request: Request) {
     (
       //@ts-ignore
       <div style={frame}>
-        {/* <img style={logo} src={`${process.env.NEXT_PUBLIC_HOST}/logo.svg`}/> */}
-        <div style={{fontFamily: 'ApocLC', fontSize: "38px", color: "white"}}>Raffle is ongoing, come back when timer hits 0</div>
-        <div style={{ display: "flex", fontFamily: 'ApocLC', fontSize: "122px", color: "white" }}>
-          {time}
+        <div
+          style={{
+            position: "absolute",
+            top: "248px",
+            left: "330px",
+            fontFamily: "ApocLC",
+            fontSize: "55px",
+            color: "white",
+          }}
+        >
+          {precent}
+        </div>
+        <div
+          style={{
+            fontFamily: "ApocLC",
+            position: "absolute",
+            top: "335px",
+            left: "330px",
+            fontSize: "55px",
+            color: "white",
+          }}
+        >
+          {precent2}
         </div>
       </div>
     ),
     {
       fonts: [
-        {
-          name: "Nostra",
-          data: await getNostra(),
-          style: "normal",
-          weight: 400,
-        },
         {
           name: "ApocLC",
           data: await getApocLC(),
