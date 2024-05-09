@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
       },
       status: 200,
     });
-  } else {
+  } else if(num == 0) {
     const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/123.jpg`;
     const frame: Frame = {
       image: imageUrl,
