@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
   let total = results[1] + results[2];
   let res1 = (total / results[1]).toFixed(0);
   let res2 = results[2] !== 0 ? (total / results[2]).toFixed(0) : 0;
-  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?precent1=${String(
+  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?precent1=${JSON.stringify(
     results
   )}&precent2=${String(res2)}`;
 
