@@ -15,9 +15,7 @@ const initialFrame: Frame = {
   postUrl: `${process.env.NEXT_PUBLIC_HOST}/vote`,
 };
 
-// console.log(process.env.NEXT_PUBLIC_HOST)
 
-// Export Next.js metadata
 export const metadata: Metadata = {
   title: "Test Name",
   description: "Check",
