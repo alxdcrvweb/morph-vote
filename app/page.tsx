@@ -1,23 +1,26 @@
 import { Frame, getFrameFlattened } from "frames.js";
 import type { Metadata } from "next";
+
 // Declare the frame
-const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/first.png`;
+const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/help.jpg`;
 const initialFrame: Frame = {
   image: imageUrl,
   version: "vNext",
   buttons: [
     {
-      label: "ENTER PRESALE LOTTERY",
       action: "post",
+      label: "VOTE",
     },
   ],
-  postUrl: `${process.env.NEXT_PUBLIC_HOST}/congratulations`,
-  imageAspectRatio: "1.91:1"
+  postUrl: `${process.env.NEXT_PUBLIC_HOST}/vote`,
 };
 
+// console.log(process.env.NEXT_PUBLIC_HOST)
+
+// Export Next.js metadata
 export const metadata: Metadata = {
-  title: "Onchain lottery thing",
-  description: "Presale lottery",
+  title: "Test Name",
+  description: "Check",
   openGraph: {
     images: [
       {
@@ -25,9 +28,8 @@ export const metadata: Metadata = {
       },
     ],
   },
-  //@ts-ignore
   other: getFrameFlattened(initialFrame),
 };
 export default async function Home() {
-  return <div>Onchain lottery thing</div>;
+  return <div>VOTE</div>;
 }
