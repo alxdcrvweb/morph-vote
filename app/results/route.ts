@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
   const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?precent1=${JSON.stringify(
     results
   )}&precent2=${String(res2)}`;
-
+  console.log(results);
   const frame: Frame = {
     image: imageUrl,
     version: "vNext",
