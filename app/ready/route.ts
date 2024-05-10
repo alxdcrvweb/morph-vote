@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
       buttons: [
         {
           action: "post",
-          label: "See results",
+          label: "Results",
         }
       ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/results`,

@@ -13,7 +13,7 @@ const initialFrame: Frame = {
     },
     {
       action: "post",
-      label: "See results",
+      label: "Results",
     },
   ],
   postUrl: `${process.env.NEXT_PUBLIC_HOST}/vote`,
