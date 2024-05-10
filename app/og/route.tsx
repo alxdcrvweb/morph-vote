@@ -41,6 +41,8 @@ export async function GET(request: Request) {
             position: "absolute",
             top: "248px",
             left: "330px",
+            display:'flex',
+            alignItems:'center',
             fontFamily: "ApocLC",
             fontSize: "55px",
             color: "white",
@@ -52,6 +54,8 @@ export async function GET(request: Request) {
           style={{
             fontFamily: "ApocLC",
             position: "absolute",
+            display:'flex',
+            alignItems:'center',
             top: "335px",
             left: "330px",
             fontSize: "55px",
