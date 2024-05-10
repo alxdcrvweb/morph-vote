@@ -46,7 +46,7 @@ export async function GET(request: Request) {
             color: "white",
           }}
         >
-          {precent}
+          {precent}%
         </div>
         <div
           style={{
@@ -58,7 +58,7 @@ export async function GET(request: Request) {
             color: "white",
           }}
         >
-          {precent2}
+          {precent2}%
         </div>
       </div>
     ),
