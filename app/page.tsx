@@ -1,7 +1,6 @@
 import { Frame, getFrameFlattened } from "frames.js";
 import type { Metadata } from "next";
 
-// Declare the frame
 const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/first.png`;
 const initialFrame: Frame = {
   image: imageUrl,
@@ -18,7 +17,6 @@ const initialFrame: Frame = {
   ],
   postUrl: `${process.env.NEXT_PUBLIC_HOST}/vote`,
 };
-
 
 export const metadata: Metadata = {
   title: "Morph voting",
