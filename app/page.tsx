@@ -9,7 +9,11 @@ const initialFrame: Frame = {
   buttons: [
     {
       action: "post",
-      label: "VOTE",
+      label: "Vote",
+    },
+    {
+      action: "post",
+      label: "See results",
     },
   ],
   postUrl: `${process.env.NEXT_PUBLIC_HOST}/vote`,
