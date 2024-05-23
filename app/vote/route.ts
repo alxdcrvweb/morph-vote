@@ -50,8 +50,13 @@ export async function POST(request: NextRequest) {
             action: "link",
             label: "BUY",
           },
+          {
+            // target: 'https://opensea.io/collection/morpheus-pfp',
+            action: "post",
+            label: "RESULTS",
+          }
         ],
-        postUrl: `${process.env.NEXT_PUBLIC_HOST}/ready`,
+        postUrl: `${process.env.NEXT_PUBLIC_HOST}/results`,
       };
       const html = getFrameHtml(frame);
 
