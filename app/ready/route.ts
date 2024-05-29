@@ -1,6 +1,6 @@
-import { getFrameHtml, validateFrameMessage, Frame, getFrameMessage } from "frames.js";
+import { getFrameHtml, Frame, getFrameMessage } from "frames.js";
 import { NextRequest } from "next/server";
-import { getAvailableVotes, vote } from "../lib/db";
+import { vote } from "../lib/db";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();

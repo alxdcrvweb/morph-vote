@@ -11,6 +11,7 @@ export async function POST(request: NextRequest) {
   const body = await request.json();
   let message = await getFrameMessage(body);
   let num = await getAvailableVotes(message.requesterFid);
+  console.log(num);
   let button = message?.buttonIndex || body.untrustedData.buttonIndex;
   if (button == 1) {
     if (num > 0) {
